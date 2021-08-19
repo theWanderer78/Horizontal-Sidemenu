@@ -1,0 +1,188 @@
+.sidemenu {
+  font: bold 14px "Bitter", sans-serif;
+  position: relative;
+  width: 240px;
+  height: 100vh;
+  background-color: #042c3b;
+  z-index: 1000;
+}
+
+.sidemenu ul {
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+
+.sidemenu ul li {
+  position: relative;
+}
+
+.sidemenu ul li a,
+.sidemenu ul li span {
+  display: block;
+  position: relative;
+  background: #042c3b;
+  color: white;
+  padding: 14px 10px;
+  color: #2c2b2d;
+  text-decoration: none;
+}
+
+.sidemenu ul li a:link,
+.sidemenu ul li a:visited {
+  color: white;
+}
+
+.sidemenu ul li:hover > a {
+  background: #e4e4e456;
+}
+
+.sidemenu ul li ul {
+  position: absolute;
+  left: -5000px;
+  top: 0;
+  opacity: 0;
+  width: 240px;
+  visibility: hidden;
+  box-shadow: 2px 2px 5px gray;
+  -webkit-transition: opacity 0.3s, visibility 0s 0.3s, left 0s 0.3s;
+  transition: opacity 0.3s, visibility 0s 0.3s, left 0s 0.3s;
+}
+
+.sidemenu ul li:hover > ul {
+  visibility: visible;
+  left: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.sidemenu ul li ul li {
+  display: list-item;
+  float: none;
+}
+
+.sidemenu ul li ul li ul {
+  top: 0;
+  left: 100%;
+}
+
+.sidemenu ul ul li:hover > a {
+  background: #52616a;
+}
+
+.sidemenu ul ul li:hover > ul {
+  left: 100%;
+}
+
+.sidemenu ul li ul li a {
+  font: normal 14px "Bitter", sans-serif;
+  padding: 10px;
+  margin: 0;
+  background: #042c3b;
+  border-right: none;
+  border-top-width: 0;
+}
+
+.sidemenu ul li > a {
+  padding-right: 25px;
+}
+
+.sidemenu ul li > a:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-left-color: #ffffff;
+  top: 40%;
+  right: 8px;
+}
+
+.sidemenu ul li > a:only-child:after {
+  display: none;
+}
+
+@media (max-width: 923px) {
+  .sidemenu ul li:nth-last-of-type(-n + 1) ul li:hover > ul {
+    left: -100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidemenu {
+    width: 100%;
+  }
+
+  .sidemenu ul li > a:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 5px solid transparent;
+    border-left-color: transparent;
+    border-top-color: #fff;
+    top: 40%;
+    right: 8px;
+  }
+
+  .sidemenu ul li {
+    position: static;
+  }
+
+  .sidemenu ul li ul {
+    width: 100%;
+    border-top: 2px solid rgba(0, 0, 0, 0.6);
+    display: none;
+  }
+
+  .sidemenu ul li:hover > ul {
+    display: block;
+    left: 0 !important;
+    top: auto;
+    box-shadow: 0 0 12px gray;
+  }
+}
+
+.RightContentBoxStyle {
+  position: relative;
+  border: 1px solid #d4e2f5;
+  padding: 30px;
+  border-radius: 7px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.RightContentBoxStyle:hover {
+  background-color: rgb(240, 248, 255);
+  box-shadow: 0px 6px 30px rgba(232, 235, 255, 0.8);
+}
+.RightContentBoxStyle:active {
+  background-color: rgb(240, 248, 255);
+  box-shadow: 0px 6px 30px rgba(232, 235, 255, 0.8);
+}
+.IconStyle {
+  color: #0073fa;
+}
+.subText {
+  color: rgb(114, 114, 114);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.roundedAvatar {
+  position: absolute !important;
+  right: 25px !important;
+  top: 25px;
+  background-color: "#E2F2FF" !important;
+}
+
+.AvatarIcon {
+  height: 12px;
+}
+.cardHeader {
+  font-size: 15px !important;
+  font-weight: 600;
+  color: #565657;
+}
